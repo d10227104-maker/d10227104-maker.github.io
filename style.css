@@ -1,0 +1,384 @@
+/* =========================================
+   EASY CUSTOMIZATION
+   修改这里就可以整体换颜色
+========================================= */
+
+:root {
+  --background: #fbfaf7;
+  --card: #ffffff;
+  --text: #222222;
+  --muted: #686868;
+  --accent: #c58a43;
+  --accent-light: #f4eadc;
+  --border: #e8e3dc;
+
+  --max-width: 1080px;
+}
+
+
+/* =========================================
+   BASE
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--background);
+  color: var(--text);
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  line-height: 1.7;
+}
+
+.container {
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+
+  padding: 80px 28px;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+
+  line-height: 1;
+
+  margin: 12px 0 26px;
+
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: 2rem;
+
+  margin-bottom: 30px;
+
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  margin-top: 0;
+
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 70vh;
+
+  display: grid;
+
+  grid-template-columns: 1fr 260px;
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+.eyebrow {
+  color: var(--accent);
+
+  font-size: 0.76rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.intro {
+  max-width: 700px;
+
+  font-size: 1.15rem;
+}
+
+.links {
+  margin-top: 30px;
+
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.profile-placeholder {
+  width: 240px;
+  height: 240px;
+
+  border-radius: 24px;
+
+  background: var(--accent-light);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--accent);
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   RESEARCH TAGS
+========================================= */
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.tags span {
+  padding: 8px 15px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   NEWS
+========================================= */
+
+.news-item {
+  display: grid;
+
+  grid-template-columns: 110px 1fr;
+
+  gap: 20px;
+
+  border-bottom: 1px solid var(--border);
+
+  padding: 15px 0;
+}
+
+.news-item p {
+  margin: 0;
+}
+
+.date {
+  font-size: 0.82rem;
+
+  color: var(--accent);
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   RESEARCH CARDS
+========================================= */
+
+.research-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+.card {
+  padding: 30px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.card-label {
+  color: var(--accent);
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.card-links {
+  margin-top: 20px;
+
+  display: flex;
+
+  gap: 16px;
+}
+
+
+/* =========================================
+   EDUCATION / EXPERIENCE
+========================================= */
+
+.timeline-item {
+  border-left: 2px solid var(--accent);
+
+  padding-left: 22px;
+
+  margin-bottom: 30px;
+}
+
+.timeline-item h3 {
+  margin-bottom: 4px;
+}
+
+.timeline-item p {
+  margin: 0;
+}
+
+.body-text {
+  max-width: 780px;
+
+  font-size: 1.05rem;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+  padding: 50px;
+
+  background: var(--accent-light);
+
+  border-radius: 24px;
+}
+
+.email-button {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  padding: 11px 20px;
+
+  border-radius: 999px;
+
+  background: var(--accent);
+
+  color: white;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  max-width: var(--max-width);
+
+  margin: auto;
+
+  padding: 0 28px 40px;
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+  .container {
+    padding-top: 45px;
+  }
+
+  section {
+    margin-bottom: 70px;
+  }
+
+  .hero {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .profile-placeholder {
+    width: 160px;
+    height: 160px;
+
+    order: -1;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+
+    gap: 2px;
+  }
+
+  .contact {
+    padding: 30px;
+  }
+
+}
